@@ -157,7 +157,7 @@ position: relative;
     border-radius: 50%;
    
 }
-.swiper {
+.slider {
     overflow: scroll-x;
     display: flex;
     width: 204px;
@@ -165,17 +165,17 @@ position: relative;
    margin-top: auto;
    
 }
-.swiper__slide{
+.slider__container{
     width: 12px;
     height: 12px;
     background-color: #DDDDDD;
     border-radius: 50%;
     margin-right: 12px;
 }
-.swiper__slide:last-child {
+.slide:last-child {
     margin-right: 0;
 }
-.swiper__slide:first-child{
+.slide:first-child{
 
     background: #B5B6BC;
 
