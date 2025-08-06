@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".swiper", {
-        slidesPerView: 0.3, // По умолчанию 1 слайд
+        slidesPerView: 1.3, // По умолчанию 1 слайд
       spaceBetween: 2,
+      slidesPerGroup: 1,
+     
      
        // Отступы между слайдами
       loop: true,
