@@ -34,9 +34,37 @@ document.addEventListener("DOMContentLoaded", function () {
 const button = document.querySelector('button')
 const icon = button.querySelector('.icon');
 
-const iconChange = function () {
+const toggleSlides = function(shown, count){
+    const slides = document.querySelectorAll('.swiper-slide');
+    const navHeight = document.querySelector('.swiper');
+    const paddingBottom = document.querySelector('.swiper-wrapper')
+
+    const totalSlides = slides.length;
+    const slidesToToggle = Math.min(count, totalSlides);
+
+    if (shown) {
+        navHeight.style.height = '342px'
+        paddingBottom.style.paddingBottom = '60px'
+        for (let i = totalSlides - slidesToToggle; i < totalSlides; i++) {
+            slides[i].classList.remove('hidden');
+            slides[i].classList.add('visible')
+           
+        }
+    } else {
+        navHeight.style.height = '232px'
+        for (let i = totalSlides - slidesToToggle; i < totalSlides; i++) {
+            slides[i].classList.remove('visible')
+            slides[i].classList.add('hidden');
+        }
+    }
+
+}
+
+const iconChange = function (shown, count) {
     const buttonOpened = button.classList.contains('showAll');
-    const buttonClosed = button.classList.contains('closeAll');
+    const buttonClosed = button.classList.contains('closeAll');  
+    
+
     if (buttonOpened) {
         button.classList.remove('showAll');
         button.classList.add('closeAll');
@@ -45,6 +73,7 @@ const iconChange = function () {
         icon.classList.add('icon--Hide');
         button.insertBefore(icon, button.firstChild);
         console.log(icon.classList);
+        toggleSlides(shown, count)
 
 
     }
@@ -56,6 +85,7 @@ const iconChange = function () {
         button.textContent = 'Показать все';
         button.insertBefore(icon, button.firstChild);
         console.log(icon.classList);
+        toggleSlides(shown, count)
 
 
     }
@@ -66,15 +96,11 @@ const iconChange = function () {
 
 button.addEventListener('click', function () {
     const screen = window.innerWidth;
-    const slides = document.querySelectorAll('.swiper-slide');
-   const navHeight = document.querySelector('.servicesBrands')
+   
     if (screen > 767 && screen < 1119) {
-    iconChange();
-    for (let i = slides.length-1; i >=6; i--) {
-        const slide = slides[i];
-        navHeight.style.height='auto';
-        slide.classList.toggle('hidden');
+        const slidesCount = 2;
+        const toShow = button.classList.contains('showAll');
 
-    }
-
+    iconChange(toShow, slidesCount);
+   
 }});
