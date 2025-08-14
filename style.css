@@ -34,9 +34,7 @@ html {
 
 }
 
-.block {}
-
-.navigation {
+.servicesBrands {
     display: flex;
     flex-wrap: wrap;
     width: 320px;
@@ -44,8 +42,6 @@ html {
     background-color: #F8F8F8;
     justify-content: center;
     border-top: 1px solid rgba(217, 255, 245, 1);
-
-
 }
 
 .title {
@@ -58,49 +54,31 @@ html {
     padding: 16px;
     background-color: #FFFFFF;
     background-image: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
-
     margin-bottom: 16px;
 
-
 }
-
-
 
 .swiper {
 
     display: flex;
     width: 100%;
     height: 100px;
-
     margin-left: 16px;
     flex-wrap: nowrap;
-    gap: 16px;
-
 
 }
 
-
-.swiper-horizontal {}
-
-
-
 .swiper-wrapper {
-
     width: 100%;
     height: auto;
     display: flex;
-    flex-wrap: nowrap;
-
     box-sizing: border-box;
-    justify-content: flex-start;
 
 }
 
 .swiper-slide {
     width: 240px;
     display: flex;
-
-
 }
 
 .slide-content {
@@ -112,10 +90,11 @@ html {
     padding-left: 16px;
     padding-right: 16px;
     align-items: center;
-    border:   #EAEAEA 1px solid;
+    border: #EAEAEA 1px solid;
     border-radius: 6px;
 
 }
+
 
 
 .item__Lenovo {
@@ -123,26 +102,21 @@ html {
     width: 108px;
     height: 32px;
     margin-right: 84px;
-    
 
 }
-.swiper-slide-next{
+
+.swiper-slide-next {
     position: relative;
 }
-.swiper-slide-next::before{
+
+.swiper-slide-next::before {
     content: '';
     position: absolute;
-
-
     width: 24px;
-height: 81px;
-background-image: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-left: 25px;
-
-opacity:1;
-
-
-
+    height: 81px;
+    background-image: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    left: 30px;
+    opacity: 1;
 }
 
 .item__Samsung {
@@ -224,17 +198,14 @@ opacity:1;
     background: #FFFFFF url("img/dropdown.svg") no-repeat center center;
     border: 2px solid #FF3E79;
     border-radius: 50%;
-
 }
-
-
 
 .swiper-pagination {
     display: flex;
     height: 12px;
     gap: 12px;
     justify-content: center;
-opacity: 1;
+    opacity: 1;
 }
 
 .swiper-pagination-bullet {
@@ -245,19 +216,157 @@ opacity: 1;
 }
 
 .swiper-pagination-bullet-inactive {
-    background-color:#DDDDDD;
-
-    
-
-
-
+    background-color: #DDDDDD;
 
 }
 
 .swiper-pagination-bullet-active {
-
     opacity: 1;
     background-color: #B5B6BC;
 
+}
 
+
+.hidden {
+    visibility: hidden;
+}
+
+@media screen and ((min-width: 767px) and (max-width: 1119px)) {
+    .servicesBrands {
+        width: 768px;
+        height: 288px;
+    }
+
+    .title {
+        height: 56px;
+        padding: 16px 0 16px 24px;
+        margin: 0;
+    }
+
+    .swiper {
+        height: 266px;
+        margin: 0%;
+        position: relative;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 24px;
+        row-gap: 16px;
+        column-gap: 24px;
+        
+
+    }
+
+    .swiper-slide {
+        box-sizing: border-box;
+        width: 224px !important;
+        height: 72px;
+        transform: none;
+        border: #1B1C21 0.1px solid;
+    }
+
+    .swiper-slide-next::before {
+        display: none;
+    }
+
+    .slide-content {
+        width: 224px;
+        height: 72px;
+
+    }
+
+    .item__Lenovo {
+        margin-right: 68px;
+    }
+
+    .item__Samsung {
+        margin-right: 60px;
+    }
+
+    .item__Apple {
+        margin-right: 132px;
+    }
+
+    .item__ViewSonic {
+        margin-right: 50px;
+    }
+
+    .item__Bosh {
+        margin-right: 48px;
+    }
+
+    .item__HP {
+        margin-right: 130px;
+    }
+
+    .item__Acer {
+        margin-right: 82px;
+    }
+
+    .item__Sony {
+        margin-right: 50px;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    .showAll {
+        display: flex;
+        width: 134px;
+        height: 24px;
+        display: flex;
+        font: 500 16px/24px "TTLakes", sans-serif;
+        color: #1B1C21;
+        letter-spacing: -0.2px;
+        position: absolute;
+        z-index: 1;
+        bottom: 36px;
+        left: 24px;
+        border: none;
+        padding: 0;
+        background-color: #F8F8F8;
+        pointer-events: all;
+        
+      
+    }
+
+    .closeAll {
+        width: 88px;
+        height: 24px;
+        display: flex;
+        font: 500 16px/24px "TTLakes", sans-serif;
+        color: #1B1C21;
+        letter-spacing: -0.2px;
+        position: absolute;
+        z-index: 1;
+        bottom: 36px;
+        left: 24px;
+        border: none;
+        padding: 0;
+        background-color: #F8F8F8;
+        pointer-events: all;
+      
+
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+      
+               
+
+    }
+
+    .icon--Show {
+        background: url("img/iconShow.png") no-repeat center;
+
+    }
+
+    .icon--Hide {
+        background: url("img/iconClose.png") no-repeat center;
+
+    }
 }

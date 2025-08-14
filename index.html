@@ -13,13 +13,13 @@
 </head>
 
 <body class="block">
-  <nav class="navigation ">
+  <section class="servicesBrands">
 
     <h1 class="title">Ремонт техники различных брендов</h1>
-  
+
     <div class="swiper">
-    
-      <div class="swiper-wrapper">
+
+      <div class="swiper-wrapper" id="swiper-wrapper">
 
         <div class="swiper-slide">
           <div class="slide-content">
@@ -59,15 +59,15 @@
             <a href="list.html" class="navigation__link"></a>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide hidden">
           <div class="slide-content">
             <div class="item__Acer"></div>
             <a href="list.html" class="navigation__link"></a>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide hidden">
           <div class="slide-content">
-            <div class="item__Sony"></div>
+            <div class="item__Sony "></div>
             <a href="list.html" class="navigation__link"></a>
           </div>
         </div>
@@ -75,8 +75,13 @@
       </div>
       <div class="swiper-pagination">
       </div>
+
+      <button class="showAll">
+        <div class="icon icon--Show"></div>Показать все
+      </button>
+
     </div>
-  </nav>
+  </section>
   <script src="swiper-bundle.min.js"></script>
   <script src="Select.js"></script>
 </body>
