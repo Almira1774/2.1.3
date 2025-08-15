@@ -31,41 +31,40 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 });
+
+
 const button = document.querySelector('button')
 const icon = button.querySelector('.icon');
 
-const toggleSlides = function(shown, count){
+const toggleSlides = function( count){
     const slides = document.querySelectorAll('.swiper-slide');
-    const navHeight = document.querySelector('.swiper');
-    const paddingBottom = document.querySelector('.swiper-wrapper')
-
+    
     const totalSlides = slides.length;
     const slidesToToggle = Math.min(count, totalSlides);
 
-    if (shown) {
-        navHeight.style.height = '342px'
-        paddingBottom.style.paddingBottom = '60px'
+      
         for (let i = totalSlides - slidesToToggle; i < totalSlides; i++) {
+            
+            if(slides[i].classList.contains('hidden')){
             slides[i].classList.remove('hidden');
             slides[i].classList.add('visible')
-           
-        }
-    } else {
-        navHeight.style.height = '232px'
-        for (let i = totalSlides - slidesToToggle; i < totalSlides; i++) {
-            slides[i].classList.remove('visible')
+            }
+            else{
+                slides[i].classList.remove('visible')
             slides[i].classList.add('hidden');
+
+            }
         }
-    }
+    } 
 
-}
 
-const iconChange = function (shown, count) {
-    const buttonOpened = button.classList.contains('showAll');
-    const buttonClosed = button.classList.contains('closeAll');  
-    
 
-    if (buttonOpened) {
+const iconChange = function ( count, heightToOpen, heightToClose) {
+    const buttonToOpen = button.classList.contains('showAll');
+    const buttonToClose = button.classList.contains('closeAll');  
+    const navHeight = document.querySelector('.swiper');
+
+    if (buttonToOpen) {
         button.classList.remove('showAll');
         button.classList.add('closeAll');
         button.textContent = 'Скрыть';
@@ -73,11 +72,12 @@ const iconChange = function (shown, count) {
         icon.classList.add('icon--Hide');
         button.insertBefore(icon, button.firstChild);
         console.log(icon.classList);
-        toggleSlides(shown, count)
+         navHeight.style.height = heightToOpen + 'px'
+        toggleSlides( count)
 
 
     }
-    else if (buttonClosed) {
+    else if (buttonToClose) {
         button.classList.remove('closeAll');
         button.classList.add('showAll');
         icon.classList.remove('icon--Hide');
@@ -85,7 +85,8 @@ const iconChange = function (shown, count) {
         button.textContent = 'Показать все';
         button.insertBefore(icon, button.firstChild);
         console.log(icon.classList);
-        toggleSlides(shown, count)
+       navHeight.style.height = heightToClose + 'px'
+        toggleSlides( count)
 
 
     }
@@ -93,14 +94,53 @@ const iconChange = function (shown, count) {
 
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.swiper-slide'); // Выбираем все слайды
+    const slidesCount = 5; // Количество слайдов, которые нужно скрыть
+    const screen = window.innerWidth; // Получаем ширину экрана
 
+    // Проверяем, находится ли ширина экрана в нужном диапазоне
+    if (screen > 767 && screen < 1119) {
+        // Добавляем класс .hidden к нужным слайдам
+        for (let i = slides.length - slidesCount; i < slides.length; i++) {
+            if (slides[i]) {
+                slides[i].classList.add('hidden'); // Добавляем класс скрытия
+            }
+        }
+        button.classList.add('showAll')
+
+    }
+button.addEventListener('click', function () {
+    const screen = window.innerWidth;
+     
+        
+
+    iconChange( slidesCount,406, 232);
+   
+})});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.swiper-slide'); // Выбираем все слайды
+    const slidesCount = 3; // Количество слайдов, которые нужно скрыть
+    const screen = window.innerWidth; // Получаем ширину экрана
+
+    // Проверяем, находится ли ширина экрана в нужном диапазоне
+    if (screen > 1119 && screen < 1281) {
+        // Добавляем класс .hidden к нужным слайдам
+        for (let i = slides.length - slidesCount; i < slides.length; i++) {
+            if (slides[i]) {
+                slides[i].classList.add('hidden'); // Добавляем класс скрытия
+            }
+        }
+        button.classList.add('showAll')
+    }
 button.addEventListener('click', function () {
     const screen = window.innerWidth;
    
-    if (screen > 767 && screen < 1119) {
-        const slidesCount = 2;
-        const toShow = button.classList.contains('showAll');
+    if (screen > 1119 && screen < 1281) {
+        const slidesCount = 3;
+        
 
-    iconChange(toShow, slidesCount);
+    iconChange( slidesCount);
    
-}});
+}});})

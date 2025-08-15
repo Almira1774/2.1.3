@@ -226,7 +226,6 @@ html {
 
 }
 
-
 .hidden {
    opacity: 0;
    transition: opacity 0.5s ease-in;
@@ -238,8 +237,10 @@ html {
 
 @media screen and ((min-width: 767px) and (max-width: 1119px)) {
     .servicesBrands {
+        align-content: flex-start;
         width: 768px;
-        max-height: 398px;
+        height: 462px;
+        background-color: #FFFFFF;
     }
 
     .title {
@@ -262,16 +263,15 @@ html {
         row-gap: 16px;
         column-gap: 24px;
         background-color:#F8F8F8;
-        
+        align-content: flex-start;     
 
     }
 
     .swiper-slide {
         box-sizing: border-box;
         width: 224px !important;
-        height: 72px;
-        transform: none;
-        border: #1B1C21 0.1px solid;
+        height: 72px;        
+       
     }
 
     .swiper-slide-next::before {
@@ -361,9 +361,7 @@ html {
 
     .icon {
         width: 24px;
-        height: 24px;
-      
-               
+        height: 24px;                
 
     }
 
@@ -377,3 +375,144 @@ html {
 
     }
 }
+
+@media  screen and ((min-width:1120px ) and (max-width: 1280px)){
+    .servicesBrands{
+        width: 1120px;
+        height: 298px;
+        
+    }
+    .title {
+        height: 56px;
+        padding: 16px 0 16px 24px;
+        margin: 0;
+    }
+
+    .swiper {
+        height: 232px;
+        margin: 0%;
+        position: relative;
+        align-content: flex-start;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        padding: 24px 32px;
+        row-gap: 16px;
+        column-gap: 32px;
+        background-color:#F8F8F8;
+        align-content: flex-start;     
+
+    }
+
+    .swiper-slide {
+        box-sizing: border-box;
+        width: 240px !important;
+        height: 72px;        
+       
+    }
+
+    .swiper-slide-next::before {
+        display: none;
+    }
+
+    .slide-content {
+        width: 240px;
+        height: 72px;
+
+    }
+
+    .item__Lenovo {
+        margin-right: 68px;
+    }
+
+    .item__Samsung {
+        margin-right: 60px;
+    }
+
+    .item__Apple {
+        margin-right: 132px;
+    }
+
+    .item__ViewSonic {
+        margin-right: 50px;
+    }
+
+    .item__Bosh {
+        margin-right: 48px;
+    }
+
+    .item__HP {
+        margin-right: 130px;
+    }
+
+    .item__Acer {
+        margin-right: 82px;
+    }
+
+    .item__Sony {
+        margin-right: 50px;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    .showAll {
+        display: flex;
+        width: 134px;
+        height: 24px;
+        display: flex;
+        font: 500 16px/24px "TTLakes", sans-serif;
+        color: #1B1C21;
+        letter-spacing: -0.2px;
+        position: absolute;
+        z-index: 1;
+        bottom: 0%;
+        left: 24px;
+        border: none;
+        padding: 0;
+        background-color: #F8F8F8;
+        pointer-events: all;
+        
+      
+    }
+
+    .closeAll {
+        width: 88px;
+        height: 24px;
+        display: flex;
+        font: 500 16px/24px "TTLakes", sans-serif;
+        color: #1B1C21;
+        letter-spacing: -0.2px;
+        position: absolute;
+        z-index: 1;
+        bottom: 0%;
+        left: 24px;
+        border: none;
+        padding: 0;
+        background-color: #F8F8F8;
+        pointer-events: all;
+      
+
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;                
+
+    }
+
+    .icon--Show {
+        background: url("img/iconShow.png") no-repeat center;
+
+    }
+
+    .icon--Hide {
+        background: url("img/iconClose.png") no-repeat center;
+
+    }
+}
+
