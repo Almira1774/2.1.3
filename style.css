@@ -201,10 +201,8 @@ html {
 }
 
 .swiper-pagination {
-    display: flex;
     height: 12px;
     gap: 12px;
-    justify-content: center;
     opacity: 1;
 }
 
