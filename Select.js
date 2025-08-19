@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (screen > 1119 && screen < 1281) {
         SlidesCount = 3;
         heightToOpen = 342;
-        heightToClose = 266;
+        heightToClose = 232;
     }
 
     
@@ -66,22 +66,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const iconChange = function () {
         const buttonToOpen = button.classList.contains('showAll');
+        const buttonToClose = button.classList.contains('closeAll');
+        
         const navHeight = document.querySelector('.swiper');
+        const textNode = button.querySelector('.icon + span');
 
         if (buttonToOpen) {
             button.classList.remove('showAll');
             button.classList.add('closeAll');
-            button.textContent = 'Скрыть';
+          textNode.textContent = 'Скрыть';
             icon.classList.remove('icon--Show');
             icon.classList.add('icon--Hide');
+            console.log(icon.className)
+            button.insertBefore(icon, button.firstChild);
             navHeight.style.height = heightToOpen + 'px';
             toggleSlides(SlidesCount);
-        } else {
+        } else if (buttonToClose) {
             button.classList.remove('closeAll');
             button.classList.add('showAll');
             icon.classList.remove('icon--Hide');
             icon.classList.add('icon--Show');
-            button.textContent = 'Показать все';
+             button.insertBefore(icon, button.firstChild);
+            console.log(icon.className)
+            
+           
+            textNode.textContent = 'Показать все';
             navHeight.style.height = heightToClose + 'px';
             toggleSlides(SlidesCount);
         }

@@ -322,7 +322,7 @@ html {
         display: flex;
         width: 134px;
         height: 24px;
-        display: flex;
+        
         font: 500 16px/24px "TTLakes", sans-serif;
         color: #1B1C21;
         letter-spacing: -0.2px;
@@ -504,6 +504,7 @@ html {
     }
 
     .icon--Show {
+        
         background: url("img/iconShow.png") no-repeat center;
 
     }
