@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    const button = document.querySelector('button');
+    const button = document.querySelector('.status');
     const icon = button.querySelector('.icon');
     const slides = document.querySelectorAll('.swiper-slide');
     let SlidesCount = 0;

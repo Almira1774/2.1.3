@@ -121,9 +121,9 @@ html {
 
 .item__Samsung {
     background-image: url("img/samsung.svg");
-    background-repeat: no-repeat;
+    background-repeat: no-repeat center ;
     width: 116px;
-    height: 39px;
+    height: 38.4px;
     margin-right: 76px;
 
 }
@@ -226,11 +226,11 @@ html {
 
 .hidden {
    opacity: 0;
-   transition: opacity 0.5s ease-in;
+   
 }
 .visible{
     opacity: 1;
-    transition: opacity 1s ease-out;
+    transition: opacity 1.5s ease-in-out;
 }
 
 @media screen and ((min-width: 767px) and (max-width: 1119px)) {
@@ -317,42 +317,33 @@ html {
     .swiper-pagination {
         display: none;
     }
+.status{
+    display: flex;
+    height: 24px;
+    font: 500 16px/24px "TTLakes", sans-serif;
+    color: #1B1C21;
+    letter-spacing: -0.2px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    left: 24px;
+    border: none;
+    padding: 0;
+    background-color: #F8F8F8;
+    pointer-events: all;
 
+}
     .showAll {
-        display: flex;
+       
         width: 134px;
-        height: 24px;
-        
-        font: 500 16px/24px "TTLakes", sans-serif;
-        color: #1B1C21;
-        letter-spacing: -0.2px;
-        position: absolute;
-        z-index: 1;
-        bottom: 0%;
-        left: 24px;
-        border: none;
-        padding: 0;
-        background-color: #F8F8F8;
-        pointer-events: all;
+       
         
       
     }
 
     .closeAll {
         width: 88px;
-        height: 24px;
-        display: flex;
-        font: 500 16px/24px "TTLakes", sans-serif;
-        color: #1B1C21;
-        letter-spacing: -0.2px;
-        position: absolute;
-        z-index: 1;
-        bottom: 0%;
-        left: 24px;
-        border: none;
-        padding: 0;
-        background-color: #F8F8F8;
-        pointer-events: all;
+       
       
 
     }
@@ -457,42 +448,34 @@ html {
     .swiper-pagination {
         display: none;
     }
+.status{
+    display: flex;
+    height: 24px;
+    display: flex;
+    font: 500 16px/24px "TTLakes", sans-serif;
+    color: #1B1C21;
+    letter-spacing: -0.2px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    left: 24px;
+    border: none;
+    padding: 0;
+    background-color: #F8F8F8;
+    pointer-events: all;
 
+}
     .showAll {
-        display: flex;
+       
         width: 134px;
-        height: 24px;
-        display: flex;
-        font: 500 16px/24px "TTLakes", sans-serif;
-        color: #1B1C21;
-        letter-spacing: -0.2px;
-        position: absolute;
-        z-index: 1;
-        bottom: 0%;
-        left: 24px;
-        border: none;
-        padding: 0;
-        background-color: #F8F8F8;
-        pointer-events: all;
+        
         
       
     }
 
     .closeAll {
         width: 88px;
-        height: 24px;
-        display: flex;
-        font: 500 16px/24px "TTLakes", sans-serif;
-        color: #1B1C21;
-        letter-spacing: -0.2px;
-        position: absolute;
-        z-index: 1;
-        bottom: 0%;
-        left: 24px;
-        border: none;
-        padding: 0;
-        background-color: #F8F8F8;
-        pointer-events: all;
+        
       
 
     }
