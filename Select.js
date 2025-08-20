@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const button = document.querySelector('.status');
-    const icon = button.querySelector('.icon');
+    const icon = button.querySelector('.status__icon');
     const slides = document.querySelectorAll('.swiper-slide');
     let SlidesCount = 0;
     const screen = window.innerWidth;
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = slides.length - SlidesCount; i < slides.length; i++) {
         slides[i].classList.add('hidden');
     }
-    button.classList.add('showAll');
+    button.classList.add('status--showAll');
 
     const toggleSlides = function (count) {
         const totalSlides = slides.length;
@@ -65,27 +65,27 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const iconChange = function () {
-        const buttonToOpen = button.classList.contains('showAll');
-        const buttonToClose = button.classList.contains('closeAll');
+        const buttonToOpen = button.classList.contains('status--showAll');
+        const buttonToClose = button.classList.contains('status--closeAll');
         
         const navHeight = document.querySelector('.swiper');
-        const textNode = button.querySelector('.icon + span');
+        const textNode = button.querySelector('.status__icon + span');
 
         if (buttonToOpen) {
-            button.classList.remove('showAll');
-            button.classList.add('closeAll');
+            button.classList.remove('status--showAll');
+            button.classList.add('status--closeAll');
           textNode.textContent = 'Скрыть';
-            icon.classList.remove('icon--Show');
-            icon.classList.add('icon--Hide');
+            icon.classList.remove('status__icon--Show');
+            icon.classList.add('status__icon--Hide');
             console.log(icon.className)
             button.insertBefore(icon, button.firstChild);
             navHeight.style.height = heightToOpen + 'px';
             toggleSlides(SlidesCount);
         } else if (buttonToClose) {
-            button.classList.remove('closeAll');
-            button.classList.add('showAll');
-            icon.classList.remove('icon--Hide');
-            icon.classList.add('icon--Show');
+            button.classList.remove('status--closeAll');
+            button.classList.add('status--showAll');
+            icon.classList.remove('status__icon--Hide');
+            icon.classList.add('status__icon--Show');
              button.insertBefore(icon, button.firstChild);
             console.log(icon.className)
             
